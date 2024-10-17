@@ -23,7 +23,6 @@ test("homepage", async({page})=>{
 
     //to validate if the page has the title or not
     await expect(page).toHaveTitle("STORE");
-
     await page.close();
 
 })
