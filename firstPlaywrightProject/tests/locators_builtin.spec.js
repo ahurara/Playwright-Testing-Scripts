@@ -11,6 +11,14 @@ page.getByTitle() to locate an element by its title attribute.
 page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be con
 */
 
+
+/*
+npx playwright codegen' command  is used to generate the code against our actions
+npx playwright codegen --deivce "device name" is used to open code and browser of screen size of the device 
+npx playwright codegen -b "browser name" is used to generate the code and open the specific browser 
+
+*/
+
 test("builtin-locators", async ({ page }) => {
   await page.goto(
     "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
@@ -30,7 +38,5 @@ test("builtin-locators", async ({ page }) => {
   //page.getByText() to locate by text content.
   await expect(await page.getByText("My Actions")).toBeVisible();
   await expect(await page.getByText("Dashboard")).toBeVisible();
-
-
 
 });
